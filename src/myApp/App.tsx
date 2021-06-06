@@ -6,8 +6,7 @@ import { Todo } from './component/todo';
 
 
 const initialState:Array<Todo>=[
-    {id:"1",text:"chinh",check:true},
-    {id:"2",text:"Thắm",check:false}
+    {id:"1",text:"vo ngoc chinh",check:true}
 ]
 export const App:React.FC=()=>{
 
@@ -74,6 +73,7 @@ export const App:React.FC=()=>{
       }
     return (
         <div className="container">
+            <h3>Todo TypeScript</h3>
             <div className="container-layout">
             <Todo  OnEdit={onEdit} toggleTodo={toggleTodo} addTodo={addTodo} todoArr={todo} todoEdit={edit} onDelete={onDelete} />
             </div>

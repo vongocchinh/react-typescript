@@ -26,7 +26,10 @@ export const AddTodo: React.FC<Add> = ({ addTodo,todoEdit }) => {
     const onchangeCheck = (e:any) => {
         setCheck(e.target.checked)
     }
-    
+    const clear=()=>{
+        setCheck(false);
+        setText('');
+    }
     const onSubmit = (e: any) => {
         e.preventDefault();
         var todo: Todo;
@@ -49,10 +52,11 @@ export const AddTodo: React.FC<Add> = ({ addTodo,todoEdit }) => {
 
     }
     return (
-        <form onSubmit={onSubmit}>
-            <input type="text" value={text&&text} onChange={onchange} />
+        <form className="form" onSubmit={onSubmit}>
+            <input placeholder="text-name" required type="text" value={text&&text} onChange={onchange} />
             <input type="checkbox" checked={check?true:false} onClick={onchangeCheck} />
-            <input type="submit" />
+            <input type="submit" value="Lưu" />
+            <p onClick={clear}>Xóa</p>
         </form>
     )
 }
