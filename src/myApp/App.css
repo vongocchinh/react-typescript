@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: auto;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+.container-layout{
+    width: 100%;
+    height: auto;
+}
+p{
+    width: 200px;
+}
